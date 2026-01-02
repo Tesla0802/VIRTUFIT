@@ -1,0 +1,3040 @@
+* {
+  max-width: 100vw;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1000;
+  position: relative;
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.hamburger-line {
+  display: block;
+  width: 2.5rem;
+  height: 0.3rem;
+  background-color: #ffffff;
+  margin: 0.5rem 0;
+  transition: all 0.3s ease;
+  border-radius: 0.2rem;
+}
+
+.hamburger.active .hamburger-line:nth-child(1) {
+  transform: rotate(45deg) translate(0.5rem, 0.5rem);
+}
+
+.hamburger.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(0.7rem, -0.6rem);
+}
+
+@media screen and (max-width: 767px) {
+  header {
+    height: auto;
+    min-height: 8dvh;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 1rem;
+    position: relative;
+  }
+
+  header .logo {
+    width: 70%;
+    border-right: none;
+    border-bottom: none;
+    padding: 0.5rem 0;
+    justify-content: flex-start;
+    z-index: 1001;
+  }
+
+  header .logo img {
+    width: auto;
+  }
+
+  header .logo h1 {
+    font-size: 2.5rem;
+  }
+
+  .hamburger {
+    display: block;
+    width: 10%;
+    text-align: right;
+    order: 2;
+  }
+
+  header nav {
+    display: none;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #000000;
+    z-index: 999;
+    border-top: 0.1rem solid #ffffff;
+    padding: 1rem 0;
+  }
+
+  header nav.active {
+    display: block;
+    animation: slideDown 0.3s ease-out;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  header nav ul {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    gap: 0;
+  }
+
+  header nav ul li {
+    width: 100%;
+    height: auto;
+    border: none;
+    border-bottom: 0.1rem solid #ffffff;
+    padding: 1rem 0;
+  }
+
+  header nav ul li:nth-child(odd) {
+    border-right: none;
+  }
+
+  header nav ul li a {
+    font-size: 1.4rem;
+    padding: 1rem 2rem;
+    display: block;
+    text-align: center;
+  }
+
+  header nav ul .logIn {
+    width: 100%;
+    order: unset;
+    border-top: 0.1rem solid #ffffff;
+    padding: 1rem 0;
+    justify-content: center;
+  }
+
+  main .up .upText h1 {
+    font-size: clamp(2.4rem, 10vw, 4rem);
+    padding: 1rem;
+    line-height: 1.2;
+    word-wrap: break-word;
+  }
+
+  main .up .down {
+    flex-direction: column;
+  }
+
+  main .up .down .downLeft {
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    border-right: none;
+    border-bottom: 0.1rem solid #ffffff;
+    align-items: center;
+    text-align: center;
+  }
+
+  main .up .down .downLeft .top {
+    width: 100%;
+    height: auto;
+    gap: 1.5rem;
+  }
+
+  main .up .down .downLeft h2 {
+    font-size: clamp(1.6rem, 5vw, 2.4rem);
+  }
+
+  main .up .down .downLeft p {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+
+  main .up .down .downRight {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  main .up .down .downRight img {
+    width: 100%;
+  }
+
+  .btn button {
+    font-size: 1.2rem;
+    padding: 1rem 1.5rem;
+    width: 40vw;
+  }
+
+  main .joinUs .middle {
+    width: 100%;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+
+  main .joinUs img {
+    width: 12rem;
+  }
+
+  main .checkOurLatestClasses,
+  main .join {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem;
+  }
+
+  main .checkOurLatestClasses .left,
+  main .join .left {
+    width: 100%;
+    border-right: none;
+    border-bottom: 0.1rem solid #000000;
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  main .checkOurLatestClasses .right,
+  main .join .right {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+
+  main .checkOurLatestClasses .right p,
+  main .join .right p {
+    width: 100%;
+    text-align: center;
+    font-size: 1.4rem;
+  }
+
+  main .videos {
+    flex-direction: column;
+    padding: 2rem;
+    gap: 3rem;
+  }
+
+  main .videos .video {
+    align-items: center;
+    text-align: center;
+  }
+
+  main .virtufit {
+    flex-direction: column;
+  }
+
+  main .virtufit .left {
+    width: 100%;
+    padding: 2rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  main .virtufit .left ul li img {
+    width: 60%;
+    max-width: 100%;
+  }
+
+  main .virtufit .left ul {
+    width: 100%;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  main .virtufit .left .txt {
+    width: 100%;
+    align-items: center;
+  }
+
+  main .virtufit .left .txt h1 {
+    font-size: clamp(2rem, 6vw, 3rem);
+    text-align: center;
+  }
+
+  main .virtufit .left .txt p {
+    width: 100%;
+    font-size: 1.4rem;
+  }
+
+  main .virtufit .right {
+    width: 100%;
+  }
+
+  main .plans {
+    flex-direction: column;
+  }
+
+  main .plans .ttl {
+    width: 100%;
+    height: auto;
+    writing-mode: horizontal-tb;
+    justify-content: center;
+    padding: 1rem 0;
+  }
+
+  main .plans .ttl h1 {
+    padding: 0;
+    font-size: 1.8rem;
+  }
+
+  main .plans .boxLeft,
+  main .plans .boxRight {
+    width: 100%;
+    height: 50dvh;
+  }
+
+  main .plans .boxLeft .subBox,
+  main .plans .boxRight .subBox {
+    margin-bottom: 5%;
+    padding: 2rem;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  main .activities {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem;
+    gap: 3rem;
+  }
+
+  main .activities .activitiesBox {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  main .activities .activitiesBox .imgOne,
+  main .activities .activitiesBox .imgTwo,
+  main .activities .activitiesBox .imgThree {
+    height: 30dvh;
+  }
+
+  main .mobileApps {
+    flex-direction: column;
+  }
+
+  main .mobileApps .left {
+    width: 100%;
+  }
+
+  main .mobileApps .right {
+    width: 100%;
+    padding: 2rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  main .mobileApps .right ul {
+    width: 100%;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  main .mobileApps .right .txt {
+    width: 100%;
+    align-items: center;
+  }
+
+  main .mobileApps .right .txt h1 {
+    font-size: clamp(2rem, 6vw, 3rem);
+  }
+
+  main .mobileApps .right .txt p {
+    width: 100%;
+  }
+
+  main .comments {
+    grid-template-columns: 1fr;
+  }
+
+  main .comments .box,
+  main .comments .boxBorder {
+    width: 100%;
+    padding: 2rem;
+    align-items: center;
+    text-align: center;
+    border-right: none;
+  }
+
+  main .comments .box h1,
+  main .comments .boxBorder h1 {
+    width: 100%;
+    font-size: 1.8rem;
+  }
+
+  main .comments .box p,
+  main .comments .boxBorder p {
+    width: 100%;
+    font-size: 1.4rem;
+  }
+
+  footer .signUp {
+    flex-direction: column;
+    height: auto;
+    padding: 2rem;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  footer .signUp h3 {
+    width: 100%;
+    font-size: 1.6rem;
+  }
+
+  footer .signUp .right {
+    align-items: center;
+    width: 100%;
+  }
+
+  footer .signUp .right .email input {
+    width: 100%;
+    max-width: 30rem;
+  }
+
+  footer button {
+    width: 100%;
+    max-width: 15rem;
+    height: 3rem;
+  }
+
+  footer .plan {
+    flex-direction: column;
+    height: auto;
+    gap: 3rem;
+    padding: 2rem;
+  }
+
+  footer .plan .logo {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  footer .plan .logo .log img {
+    width: 4rem;
+  }
+
+  footer .plan .logo p {
+    width: 100%;
+  }
+
+  footer .right {
+    width: 100%;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  footer .right .menu,
+  footer .right .socials,
+  footer .right .gymAddress {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  footer .right .gymAddress {
+    gap: 2rem;
+  }
+
+  footer .down p {
+    font-size: 1rem;
+    padding: 1rem;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .hamburger {
+    display: none;
+  }
+
+  header {
+    height: 9dvh;
+    padding: 0 1rem;
+  }
+
+  header nav {
+    width: 80%;
+  }
+
+  header .logo {
+    width: 15vw;
+    min-width: 18rem;
+    border: none;
+  }
+
+  header .logo h1 {
+    font-size: 2rem;
+  }
+
+  header nav ul li a {
+    font-size: 1rem;
+  }
+
+  main .up .upText h1 {
+    font-size: clamp(4rem, 12vw, 8rem);
+  }
+
+  main .up .down {
+    flex-direction: column;
+  }
+
+  main .up .down .downLeft {
+    width: 100%;
+    height: auto;
+    padding: 3rem;
+    border-right: none;
+    border-bottom: 0.1rem solid #ffffff;
+    text-align: center;
+    align-items: center;
+  }
+
+  main .up .down .downLeft .top {
+    width: 80%;
+  }
+
+  main .up .down .downRight {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  main .checkOurLatestClasses .left h1,
+  main .join .left h1 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    padding: 0 2rem;
+  }
+
+  main .checkOurLatestClasses .right p,
+  main .join .right p {
+    width: 50%;
+    font-size: 1.4rem;
+  }
+
+  main .videos {
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  main .videos .video {
+    width: calc(50% - 1rem);
+  }
+
+  main .virtufit {
+    flex-direction: column;
+  }
+
+  main .virtufit .left {
+    width: 100%;
+    padding: 3rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  main .virtufit .left ul {
+    width: 80%;
+  }
+
+  main .virtufit .left ul li img {
+    width: 60%;
+    max-width: 100%;
+  }
+
+  main .virtufit .left .txt p {
+    width: 90%;
+  }
+
+  main .virtufit .right {
+    width: 100%;
+  }
+
+  main .plans {
+    flex-wrap: wrap;
+  }
+
+  main .plans .ttl {
+    width: 100%;
+    height: auto;
+    writing-mode: horizontal-tb;
+    justify-content: center;
+    padding: 1rem 0;
+  }
+
+  main .plans .boxLeft,
+  main .plans .boxRight {
+    width: 50%;
+    height: 60dvh;
+  }
+
+  main .activities {
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 3rem 2rem;
+    height: auto;
+  }
+
+  main .activities .activitiesBox {
+    width: calc(33.333% - 1.33rem);
+  }
+
+  main .mobileApps {
+    flex-direction: column;
+  }
+
+  main .mobileApps .right {
+    padding: 3rem;
+  }
+
+  main .comments {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  main .comments .box,
+  main .comments .boxBorder {
+    padding: 2rem;
+  }
+
+  footer .plan {
+    gap: 2rem;
+    padding: 3rem;
+  }
+
+  footer .plan .logo p {
+    width: 80%;
+  }
+
+  footer .right {
+    gap: 4rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hamburger {
+    display: none;
+  }
+
+  main .up .upText h1 {
+    font-size: clamp(8rem, 15vw, 13rem);
+  }
+
+  main .videos .video {
+    width: 48%;
+  }
+
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  html {
+    font-size: 70%;
+  }
+
+  main .up .upText h1 {
+    margin-bottom: 4rem;
+  }
+}
+
+@media screen and (max-height: 600px) and (orientation: landscape) {
+  header {
+    height: 12dvh;
+  }
+
+  main .up .upText h1 {
+    font-size: clamp(3rem, 8vw, 6rem);
+  }
+
+  main .up .down .downLeft {
+    height: auto;
+    min-height: 40dvh;
+  }
+
+  main .activities .activitiesBox .imgOne,
+  main .activities .activitiesBox .imgTwo,
+  main .activities .activitiesBox .imgThree {
+    height: 35dvh;
+  }
+
+  .hamburger {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .hamburger-line {
+    width: 2rem;
+    height: 0.25rem;
+    margin: 0.4rem 0;
+  }
+}
+
+@media print {
+  .hamburger,
+  header,
+  footer,
+  .btn,
+  .whiteBtn {
+    display: none !important;
+  }
+
+  body {
+    background-color: white !important;
+    color: black !important;
+  }
+
+  * {
+    color: black !important;
+    background-color: transparent !important;
+  }
+}
+
+.text-overflow-prevent {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.no-overflow {
+  overflow: hidden;
+}
+
+.scroll-vertical {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+@supports (-webkit-touch-callout: none) {
+  .mobile-height-fix {
+    min-height: -webkit-fill-available;
+  }
+}
+
+.scalable-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.flex-responsive {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-responsive > * {
+  flex: 1 1 300px;
+  min-width: 0;
+}
+
+.grid-responsive {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .btn button:hover {
+    transform: none !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  main .contactTitle {
+    flex-direction: column;
+    height: auto;
+    min-height: auto;
+    padding: 2rem 0px;
+    gap: 2rem;
+  }
+
+  main .contactTitle .left {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #ffffff;
+    padding: 2rem 0;
+    height: auto;
+  }
+
+  main .contactTitle .left img {
+    width: 70%;
+  }
+
+  main .contactTitle .right {
+    width: 100%;
+    padding: 0;
+    height: auto;
+    text-align: center;
+  }
+
+  main .contactTitle .right p {
+    width: 80%;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+  }
+
+  main .registration {
+    flex-direction: column;
+    height: auto;
+    gap: 2rem;
+  }
+
+  main .registration .left {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #ffffff;
+    padding: 2.5rem 0;
+    height: auto;
+    writing-mode: horizontal-tb;
+    justify-content: center;
+  }
+
+  main .registration .left h1 {
+    writing-mode: horizontal-tb;
+    font-size: 3.8rem;
+    text-align: center;
+  }
+
+  main .registration .middle {
+    width: 100%;
+    height: auto;
+    padding: 1rem 0;
+    gap: 1.5rem;
+  }
+
+  main .registration .middle .middleUp {
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 25rem;
+    gap: 1.2rem;
+  }
+
+  main .registration .middle .middleUp .box {
+    width: 100%;
+  }
+
+  main .registration .middle .middleUp input {
+    width: 100%;
+    height: 2.8rem;
+    max-width: 25rem;
+    font-size: 1rem;
+  }
+
+  main .registration .middle .middleUp label {
+    font-size: 1.1rem;
+  }
+
+  main .registration .middle .middleDown {
+    width: 100%;
+    max-width: 25rem;
+    gap: 1.2rem;
+  }
+
+  main .registration .middle .middleDown .box input {
+    width: 25rem;
+    height: 6rem;
+    max-width: 25rem;
+    font-size: 1rem;
+  }
+
+  main .registration .middle .middleDown .box label {
+    font-size: 1.1rem;
+  }
+
+  main .registration .middle .middleDown button {
+    width: 100%;
+    height: 3rem;
+    max-width: 25rem;
+    font-size: 1.2rem;
+  }
+
+  main .registration .right {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid #ffffff;
+    padding: 1.5rem 0 0 0;
+    height: auto;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  main .registration .right .box,
+  main .registration .right .hours {
+    align-items: center;
+    height: auto;
+    margin-bottom: 1.5rem;
+    gap: 0.8rem;
+  }
+
+  main .registration .right .box h3,
+  main .registration .right .hours h3 {
+    font-size: 1.4rem;
+  }
+
+  main .registration .right .box p,
+  main .registration .right .hours p {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  main .contactTitle .left {
+    width: 50%;
+    padding: 1rem;
+  }
+
+  main .contactTitle .left img {
+    width: 80%;
+  }
+
+  main .contactTitle .right {
+    width: 50%;
+    padding: 1.5rem;
+  }
+
+  main .contactTitle .right p {
+    width: 85%;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+  }
+
+  main .registration {
+    height: 65dvh;
+  }
+
+  main .registration .left {
+    padding: 1.5rem;
+    width: 15%;
+  }
+
+  main .registration .left h1 {
+    font-size: 2.2rem;
+  }
+
+  main .registration .middle {
+    width: 50%;
+    padding: 0 1.5rem;
+    gap: 1.5rem;
+  }
+
+  main .registration .middle .middleUp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  main .registration .middle .middleUp input {
+    width: 25rem;
+    height: 2.8rem;
+    max-width: 30rem;
+    font-size: 1rem;
+  }
+
+  main .registration .middle .middleUp label {
+    font-size: 1.1rem;
+  }
+
+  main .registration .middle .middleDown {
+    width: 100%;
+    gap: 1.2rem;
+  }
+
+  main .registration .middle .middleDown .box input {
+    width: 25rem;
+    height: 6rem;
+    max-width: 30rem;
+    font-size: 1rem;
+  }
+
+  main .registration .middle .middleDown .box label {
+    font-size: 1.1rem;
+  }
+
+  main .registration .middle .middleDown button {
+    height: 3rem;
+    max-width: 25rem;
+    font-size: 1.2rem;
+  }
+
+  main .registration .right {
+    width: 35%;
+    gap: 1rem;
+  }
+
+  main .registration .right .box h3,
+  main .registration .right .hours h3 {
+    font-size: 1.3rem;
+  }
+
+  main .registration .right .box p,
+  main .registration .right .hours p {
+    font-size: 1.1rem;
+  }
+
+  main .registration .right .box,
+  main .registration .right .hours {
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  main .c main .contactTitle .right p {
+    font-size: 1.3rem;
+    line-height: 1.7rem;
+    width: 70%;
+  }
+
+  main .contactTitle .left img {
+    width: 50%;
+  }
+
+  main .registration {
+    height: 75dvh;
+  }
+
+  main .registration .left h1 {
+    font-size: 2.8rem;
+  }
+
+  main .registration .middle .middleUp input {
+    width: 16rem;
+    height: 3rem;
+    font-size: 1rem;
+  }
+
+  main .registration .middle .middleUp label {
+    font-size: 1.1rem;
+  }
+
+  main .registration .middle .middleDown .box input {
+    width: 35rem;
+    height: 7rem;
+    font-size: 1rem;
+  }
+
+  main .registration .middle .middleDown button {
+    height: 3.2rem;
+    font-size: 1.2rem;
+  }
+
+  main .registration .right {
+    padding: 3rem;
+  }
+
+  main .registration .right .box h3,
+  main .registration .right .hours h3 {
+    font-size: 1.4rem;
+  }
+
+  main .registration .right .box p,
+  main .registration .right .hours p {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  main .contactTitle .right p {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    width: 64%;
+  }
+
+  main .registration {
+    height: 80dvh;
+  }
+
+  main .registration .left h1 {
+    font-size: 3.2rem;
+  }
+
+  main .registration .middle .middleUp input {
+    width: 19rem;
+    height: 3.5rem;
+    font-size: 1.1rem;
+  }
+
+  main .registration .middle .middleUp label {
+    font-size: 1.2rem;
+  }
+
+  main .registration .middle .middleDown .box input {
+    width: 40rem;
+    height: 8rem;
+    font-size: 1.1rem;
+  }
+
+  main .registration .middle .middleDown button {
+    height: 3.5rem;
+    font-size: 1.3rem;
+  }
+
+  main .registration .right {
+    padding: 4rem;
+  }
+
+  main .registration .right .box h3,
+  main .registration .right .hours h3 {
+    font-size: 1.5rem;
+  }
+
+  main .registration .right .box p,
+  main .registration .right .hours p {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-height: 600px) and (orientation: landscape) {
+  main .contactTitle {
+    padding: 1rem;
+  }
+
+  main .contactTitle .left img {
+    width: 40%;
+  }
+
+  main .contactTitle .right p {
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+  }
+
+  main .registration {
+    height: 65dvh;
+    padding: 1.5rem;
+  }
+
+  main .registration .left h1 {
+    font-size: 1.8rem;
+  }
+
+  main .registration .middle .middleUp {
+    gap: 1rem;
+  }
+
+  main .registration .middle .middleUp input {
+    height: 2.5rem;
+  }
+
+  main .registration .middle .middleDown .box input {
+    height: 5rem;
+  }
+
+  main .registration .middle .middleDown button {
+    height: 2.8rem;
+  }
+
+  main .registration .right {
+    padding: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  main .contactTitle {
+    padding: 1.5rem 0px;
+    gap: 1.5rem;
+  }
+
+  main .contactTitle .left img {
+    width: 90%;
+  }
+
+  main .contactTitle .right p {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    width: 90%;
+  }
+
+  main .registration {
+    gap: 1.5rem;
+  }
+
+  main .registration .middle .middleUp {
+    max-width: 22rem;
+    gap: 1rem;
+  }
+
+  main .registration .middle .middleUp input {
+    height: 2.6rem;
+    font-size: 0.95rem;
+  }
+
+  main .registration .middle .middleDown .box input {
+    height: 5.5rem;
+    max-width: 22rem;
+  }
+
+  main .registration .middle .middleDown button {
+    width: 22rem;
+    height: 2.8rem;
+    font-size: 1.1rem;
+  }
+
+  main .registration .left h1 {
+    font-size: 1.8rem;
+  }
+
+  main .registration .right .box h3,
+  main .registration .right .hours h3 {
+    font-size: 1.3rem;
+  }
+
+  main .registration .right .box p,
+  main .registration .right .hours p {
+    font-size: 1.1rem;
+  }
+}
+
+main .challangeBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 4rem;
+  box-sizing: border-box;
+}
+
+main .challangeBox .box,
+main .challangeBox .boxReverse {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ffffff;
+  margin-top: 4rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+main .challangeBox .box,
+main .challangeBox .boxReverse {
+  width: 95%;
+}
+
+@media (min-width: 480px) {
+  main .challangeBox .box,
+  main .challangeBox .boxReverse {
+    width: 90%;
+  }
+}
+
+@media (min-width: 640px) {
+  main .challangeBox .box,
+  main .challangeBox .boxReverse {
+    width: 85%;
+  }
+}
+
+@media (min-width: 768px) {
+  main .challangeBox .box,
+  main .challangeBox .boxReverse {
+    width: 80%;
+  }
+}
+
+@media (min-width: 900px) {
+  main .challangeBox .box,
+  main .challangeBox .boxReverse {
+    width: 75%;
+  }
+}
+
+@media (min-width: 1024px) {
+  main .challangeBox .box,
+  main .challangeBox .boxReverse {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1150px) {
+  main .challangeBox .box,
+  main .challangeBox .boxReverse {
+    width: 65%;
+  }
+}
+
+@media (min-width: 1280px) {
+  main .challangeBox .box,
+  main .challangeBox .boxReverse {
+    width: 62%;
+  }
+}
+
+@media (min-width: 1440px) {
+  main .challangeBox .box,
+  main .challangeBox .boxReverse {
+    width: 58%;
+  }
+}
+
+main .challangeBox .box .left,
+main .challangeBox .boxReverse .left {
+  width: 50%;
+  flex-shrink: 0;
+}
+
+main .challangeBox .box .left img,
+main .challangeBox .boxReverse .left img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+main .challangeBox .box .right,
+main .challangeBox .boxReverse .right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.3rem;
+  padding: 2rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+main .challangeBox .box .right a,
+main .challangeBox .boxReverse .right a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+main .challangeBox .box .right a h1,
+main .challangeBox .boxReverse .right a h1 {
+  font-size: clamp(1.5rem, 2.5vw, 2.8rem);
+  margin: 0.2rem 0;
+  line-height: 1.2;
+  font-weight: bold;
+}
+
+main .challangeBox .box .right p,
+main .challangeBox .boxReverse .right p {
+  font-size: clamp(0.9rem, 1.2vw, 1.3rem);
+  margin: 0.2rem 0;
+}
+
+main .challangeBox .box .right button,
+main .challangeBox .boxReverse .right button {
+  color: #000000;
+  background-color: #05e00b;
+  border: 1px solid #05e00b;
+  font-size: clamp(0.9rem, 1.1vw, 1.4rem);
+  cursor: pointer;
+  padding: 0.7rem 2rem;
+  transition: all 0.3s ease-in-out;
+  border-radius: 4px;
+  font-weight: bold;
+  min-width: 150px;
+  margin-top: 0.5rem;
+  box-sizing: border-box;
+}
+
+main .challangeBox .box .right button:hover,
+main .challangeBox .boxReverse .right button:hover {
+  background-color: #000000;
+  color: #05e00b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 900px) {
+  main .challangeBox {
+    flex-direction: row;
+    padding: 2rem;
+  }
+
+  main .challangeBox .box,
+  main .challangeBox .boxReverse {
+    flex-direction: column;
+    margin-top: 3rem;
+  }
+
+  main .challangeBox .boxReverse {
+    flex-direction: column-reverse;
+  }
+
+  main .challangeBox .box .left,
+  main .challangeBox .box .right,
+  main .challangeBox .boxReverse .left,
+  main .challangeBox .boxReverse .right {
+    width: 100%;
+  }
+
+  main .challangeBox .box .right,
+  main .challangeBox .boxReverse .right {
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+
+  main .challangeBox .box .left img,
+  main .challangeBox .boxReverse .left img {
+    max-height: 300px;
+    object-fit: cover;
+  }
+
+  main .challangeBox .box .right a h1,
+  main .challangeBox .boxReverse .right a h1 {
+    font-size: 2rem;
+  }
+
+  main .challangeBox .box .right p,
+  main .challangeBox .boxReverse .right p {
+    font-size: 1.1rem;
+  }
+
+  main .challangeBox .box .right button,
+  main .challangeBox .boxReverse .right button {
+    font-size: 1.1rem;
+    padding: 0.6rem 1.8rem;
+  }
+}
+
+@media (max-width: 640px) {
+  main .challangeBox {
+    padding: 1.5rem;
+  }
+
+  main .challangeBox .box,
+  main .challangeBox .boxReverse {
+    margin-top: 2rem;
+  }
+
+  main .challangeBox .box .right,
+  main .challangeBox .boxReverse .right {
+    padding: 1.2rem;
+    gap: 0.8rem;
+  }
+
+  main .challangeBox .box .right a h1,
+  main .challangeBox .boxReverse .right a h1 {
+    font-size: 1.7rem;
+  }
+
+  main .challangeBox .box .right p,
+  main .challangeBox .boxReverse .right p {
+    font-size: 1rem;
+  }
+
+  main .challangeBox .box .right button,
+  main .challangeBox .boxReverse .right button {
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    min-width: 110px;
+  }
+}
+
+@media (max-width: 480px) {
+  main .challangeBox {
+    flex-direction: column;
+    padding: 5rem;
+  }
+
+  main .challangeBox .box,
+  main .challangeBox .boxReverse {
+    margin-top: 1.5rem;
+  }
+
+  main .challangeBox .box .right,
+  main .challangeBox .boxReverse .right {
+    padding: 1rem;
+    gap: 0.6rem;
+  }
+
+  main .challangeBox .box .right a h1,
+  main .challangeBox .boxReverse .right a h1 {
+    font-size: 1.5rem;
+  }
+
+  main .challangeBox .box .right button,
+  main .challangeBox .boxReverse .right button {
+    padding: 0.4rem 1.2rem;
+    font-size: 0.9rem;
+    min-width: 130px;
+  }
+}
+
+@media (max-width: 360px) {
+  main .challangeBox {
+    padding: 4rem;
+  }
+
+  main .challangeBox .box .right a h1,
+  main .challangeBox .boxReverse .right a h1 {
+    font-size: 1.3rem;
+  }
+
+  main .challangeBox .box .right p,
+  main .challangeBox .boxReverse .right p {
+    font-size: 0.9rem;
+  }
+
+  main .challangeBox .box .right button,
+  main .challangeBox .boxReverse .right button {
+    font-size: 0.85rem;
+    padding: 0.4rem 1rem;
+  }
+}
+
+@media (min-width: 901px) {
+  main .challangeBox .box:hover,
+  main .challangeBox .boxReverse:hover {
+    transform: scale(1.01);
+    transition: transform 0.3s ease;
+  }
+}
+
+main .boxTop {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: min(5rem, 10%);
+}
+
+main .boxTop .top {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  gap: 2rem;
+  margin-bottom: 10rem;
+}
+
+main .boxTop .top h1 {
+  font-size: 8rem;
+}
+
+main .boxTop .top p {
+  font-size: 1.5rem;
+}
+
+main .boxTop .strong {
+  width: 90rem;
+  height: 45rem;
+  background-image: url("./img/challange/strong.png");
+  background-position: center;
+  background-size: cover;
+}
+
+main .boxTop .arms {
+  width: 90rem;
+  height: 45rem;
+  background-image: url("./img/challange/arms.png");
+  background-position: center;
+  background-size: cover;
+}
+
+main .boxTop .squat {
+  width: 90rem;
+  height: 45rem;
+  background-image: url("./img/challange/squat.png");
+  background-position: center;
+  background-size: cover;
+}
+
+main .boxBottom {
+  width: 43%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main .boxBottom .boxBottomSub {
+  border-bottom: 1px solid #252525;
+  padding-bottom: 3rem;
+}
+
+main .boxBottom .boxBottomSub,
+main .boxBottom .share {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  gap: 2rem;
+  margin-bottom: 5rem;
+  padding-bottom: 10rem;
+}
+
+main .boxBottom .boxBottomSub h1,
+main .boxBottom .share h1 {
+  font-size: 3rem;
+  color: #05e00b;
+}
+
+main .boxBottom .boxBottomSub p,
+main .boxBottom .share p {
+  font-size: 1.5rem;
+}
+
+main .boxBottom .boxBottomSub p .green {
+  text-decoration: underline;
+  color: #05e00b;
+}
+
+main .boxBottom .share ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+main .boxBottom .share i {
+  font-size: 1.8rem;
+  color: #05e00b;
+}
+
+main .boxBottom .share button {
+  color: #000000;
+  background-color: #05e00b;
+  border: 1px solid #05e00b;
+  font-size: 1.6rem;
+  cursor: pointer;
+  padding: min(1rem, 5%) min(4.5rem, 9%);
+  transition: all 0.3s ease-in-out;
+  margin-top: 4rem;
+}
+
+main .boxBottom .share button:hover {
+  background-color: #000000;
+  color: #05e00b;
+  transition: all 0.3s ease-in-out;
+}
+
+@media screen and (min-width: 1920px) {
+  main .boxTop .top h1 {
+    font-size: 9.6rem;
+  }
+
+  main .boxTop .top p {
+    font-size: 1.8rem;
+  }
+
+  main .boxTop .strong {
+    width: 108rem;
+    height: 54rem;
+  }
+
+  main .boxTop .arms {
+    width: 108rem;
+    height: 54rem;
+  }
+
+  main .boxTop .squat {
+    width: 108rem;
+    height: 54rem;
+  }
+
+  main .boxBottom .boxBottomSub h1,
+  main .boxBottom .share h1 {
+    font-size: 3.6rem;
+  }
+
+  main .boxBottom .boxBottomSub p,
+  main .boxBottom .share p {
+    font-size: 1.8rem;
+  }
+
+  main .boxBottom .share i {
+    font-size: 2.16rem;
+  }
+
+  main .boxBottom .share button {
+    font-size: 1.92rem;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  main .boxTop .top h1 {
+    font-size: 7.2rem;
+  }
+
+  main .boxTop .top p {
+    font-size: 1.35rem;
+  }
+
+  main .boxTop .strong {
+    width: 81rem;
+    height: 40.5rem;
+  }
+
+  main .boxTop .arms {
+    width: 81rem;
+    height: 40.5rem;
+  }
+
+  main .boxTop .squat {
+    width: 81rem;
+    height: 40.5rem;
+  }
+
+  main .boxBottom {
+    width: 48%;
+  }
+
+  main .boxBottom .boxBottomSub h1,
+  main .boxBottom .share h1 {
+    font-size: 2.7rem;
+  }
+
+  main .boxBottom .boxBottomSub p,
+  main .boxBottom .share p {
+    font-size: 1.35rem;
+  }
+
+  main .boxBottom .share i {
+    font-size: 1.62rem;
+  }
+
+  main .boxBottom .share button {
+    font-size: 1.44rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  main .boxTop {
+    padding: min(4rem, 8%);
+  }
+
+  main .boxTop .top {
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+  }
+
+  main .boxTop .top h1 {
+    font-size: 6rem;
+  }
+
+  main .boxTop .top p {
+    font-size: 1.125rem;
+  }
+
+  main .boxTop .strong {
+    width: 67.5rem;
+    height: 33.75rem;
+    margin: 0 auto;
+  }
+
+  main .boxTop .arms {
+    width: 67.5rem;
+    height: 33.75rem;
+    margin: 0 auto;
+  }
+
+  main .boxTop .squat {
+    width: 67.5rem;
+    height: 33.75rem;
+    margin: 0 auto;
+  }
+
+  main .boxBottom {
+    width: 70%;
+  }
+
+  main .boxBottom .boxBottomSub,
+  main .boxBottom .share {
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+    padding-bottom: 8rem;
+  }
+
+  main .boxBottom .boxBottomSub h1,
+  main .boxBottom .share h1 {
+    font-size: 2.25rem;
+  }
+
+  main .boxBottom .boxBottomSub p,
+  main .boxBottom .share p {
+    font-size: 1.75rem;
+  }
+
+  main .boxBottom .share ul {
+    gap: 3rem;
+  }
+
+  main .boxBottom .share i {
+    font-size: 1.8rem;
+  }
+
+  main .boxBottom .share button {
+    font-size: 1.2rem;
+    margin-top: 3rem;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  main .boxTop {
+    padding: min(3rem, 6%);
+  }
+
+  main .boxTop .top {
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  main .boxTop .top h1 {
+    font-size: 4.8rem;
+  }
+
+  main .boxTop .top p {
+    font-size: 1.5rem;
+  }
+
+  main .boxTop .strong {
+    width: 45rem;
+    height: 27rem;
+    margin: 0 auto;
+  }
+
+  main .boxTop .arms {
+    width: 45rem;
+    height: 27rem;
+    margin: 0 auto;
+  }
+
+  main .boxTop .squat {
+    width: 45rem;
+    height: 27rem;
+    margin: 0 auto;
+  }
+
+  main .boxBottom {
+    width: 85%;
+  }
+
+  main .boxBottom .boxBottomSub,
+  main .boxBottom .share {
+    align-items: center;
+    text-align: center;
+    gap: 1.2rem;
+    margin-bottom: 3rem;
+    padding-bottom: 6rem;
+  }
+
+  main .boxBottom .boxBottomSub h1,
+  main .boxBottom .share h1 {
+    font-size: 3rem;
+  }
+
+  main .boxBottom .boxBottomSub p,
+  main .boxBottom .share p {
+    font-size: 1.6rem;
+  }
+
+  main .boxBottom .share ul {
+    gap: 2.4rem;
+  }
+
+  main .boxBottom .share i {
+    font-size: 1.8rem;
+  }
+
+  main .boxBottom .share button {
+    font-size: 1.5rem;
+    margin-top: 2.4rem;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .boxTop {
+    padding: min(2rem, 4%);
+  }
+
+  main .boxTop .top {
+    align-items: center;
+    text-align: center;
+    gap: 0.8rem;
+    margin-bottom: 2.5rem;
+  }
+
+  main .boxTop .top h1 {
+    font-size: 4rem;
+  }
+
+  main .boxTop .top p {
+    font-size: 1.3rem;
+  }
+
+  main .boxTop .strong {
+    width: 35rem;
+    height: 22.5rem;
+    margin: 0 auto;
+  }
+
+  main .boxTop .arms {
+    width: 35rem;
+    height: 22.5rem;
+    margin: 0 auto;
+  }
+
+  main .boxTop .squat {
+    width: 35rem;
+    height: 22.5rem;
+    margin: 0 auto;
+  }
+
+  main .boxBottom {
+    width: 95%;
+  }
+
+  main .boxBottom .boxBottomSub,
+  main .boxBottom .share {
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+    padding-bottom: 5rem;
+  }
+
+  main .boxBottom .boxBottomSub h1,
+  main .boxBottom .share h1 {
+    font-size: 2rem;
+  }
+
+  main .boxBottom .boxBottomSub p,
+  main .boxBottom .share p {
+    font-size: 1.2rem;
+  }
+
+  main .boxBottom .share ul {
+    gap: 2rem;
+  }
+
+  main .boxBottom .share i {
+    font-size: 1.4rem;
+  }
+
+  main .boxBottom .share button {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    padding: 1rem 5rem;
+  }
+}
+
+@media screen and (max-width: 319px) {
+  main .boxTop {
+    padding: min(1.5rem, 3%);
+  }
+
+  main .boxTop .top {
+    align-items: center;
+    text-align: center;
+    gap: 0.6rem;
+    margin-bottom: 2rem;
+  }
+
+  main .boxTop .top h1 {
+    font-size: 3.2rem;
+  }
+
+  main .boxTop .top p {
+    font-size: 0.6rem;
+  }
+
+  main .boxTop .strong {
+    width: 22rem;
+    height: 18rem;
+    margin: 0 auto;
+  }
+
+  main .boxTop .arms {
+    width: 22rem;
+    height: 18rem;
+    margin: 0 auto;
+  }
+
+  main .boxTop .squat {
+    width: 22rem;
+    height: 18rem;
+    margin: 0 auto;
+  }
+
+  main .boxBottom {
+    width: 98%;
+  }
+
+  main .boxBottom .boxBottomSub,
+  main .boxBottom .share {
+    align-items: center;
+    text-align: center;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+    padding-bottom: 4rem;
+  }
+
+  main .boxBottom .boxBottomSub h1,
+  main .boxBottom .share h1 {
+    font-size: 1.2rem;
+  }
+
+  main .boxBottom .boxBottomSub p,
+  main .boxBottom .share p {
+    font-size: 0.6rem;
+  }
+
+  main .boxBottom .share ul {
+    gap: 1.6rem;
+  }
+
+  main .boxBottom .share i {
+    font-size: 0.72rem;
+  }
+
+  main .boxBottom .share button {
+    font-size: 0.64rem;
+    margin-top: 1.6rem;
+    padding: 0.64rem 1.8rem;
+  }
+}
+
+@media screen and (max-height: 600px) and (orientation: landscape) {
+  main .boxTop .strong {
+    height: 35vh;
+  }
+
+  main .boxTop .arms {
+    height: 35vh;
+  }
+
+  main .boxTop .squat {
+    height: 35vh;
+  }
+
+  main .boxBottom {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+main .ttl {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5rem;
+}
+
+main .ttl h1 {
+  font-size: 5rem;
+  text-align: center;
+  padding: 0 5%;
+}
+
+main .getStarted {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid #ffffff;
+  padding: min(10rem, 5%) min(22rem, 16%);
+}
+
+main .card {
+  width: 40rem;
+  height: 50rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid #ffffff;
+}
+
+main .card .up {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 2rem;
+  position: relative;
+}
+
+main .card .up .best {
+  width: 8rem;
+  height: 2.8rem;
+  background-color: #05e00b;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+main .card .up .best p {
+  font-size: 1.2rem;
+  color: #000000;
+}
+
+main .card .up .members {
+  font-size: 1.1rem;
+}
+
+main .card .up .price {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main .card .up .price .big {
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+
+main .card .up .price .dollar {
+  width: 10rem;
+  height: 0px;
+  display: flex;
+  align-items: baseline;
+}
+
+main .card .up .price .dollar p {
+  font-size: 1.7rem;
+  color: #05e00b;
+}
+
+main .card .up .price h1 {
+  font-size: 8rem;
+  color: #05e00b;
+}
+
+main .card .up .price p {
+  color: #05e00b;
+}
+
+main .card .middle {
+  width: 100%;
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  border-bottom: 1px solid #ffffff;
+  padding-bottom: 4rem;
+}
+
+main .card .middle .trial {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main .card .middle button {
+  width: 60%;
+  height: 5rem;
+  font-size: 1.6rem;
+  background-color: #000000;
+  border: 1px solid #ffffff;
+  color: #05e00b;
+}
+
+main .card .middle button:hover {
+  text-decoration: underline;
+}
+
+main .card .down {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+main .card .down ul {
+  width: 85%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+main .card .down ul li {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  border-bottom: 1px solid #252525;
+  padding: 1rem 0px;
+}
+
+main .card .down ul .noLine {
+  border: none;
+}
+
+@media screen and (max-width: 768px) {
+  main .ttl {
+    padding-top: 3rem;
+  }
+
+  main .ttl h1 {
+    font-size: 3.5rem;
+  }
+
+  main .getStarted {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding: 5rem 1rem;
+  }
+
+  main .card {
+    width: 90%;
+    max-width: 35rem;
+    height: auto;
+    min-height: 45rem;
+  }
+
+  main .card .up {
+    gap: 2rem;
+    padding: 2.5rem;
+  }
+
+  main .card .up .best {
+    width: 7rem;
+    height: 2.5rem;
+    top: -12px;
+  }
+
+  main .card .up .best p {
+    font-size: 1rem;
+  }
+
+  main .card .up .members {
+    font-size: 1.1rem;
+  }
+
+  main .card .up .price .big {
+    font-size: 1.5rem;
+  }
+
+  main .card .up .price .dollar {
+    width: 8rem;
+  }
+
+  main .card .up .price .dollar p {
+    font-size: 1.5rem;
+  }
+
+  main .card .up .price h1 {
+    font-size: 6rem;
+  }
+
+  main .card .middle {
+    height: 15rem;
+    gap: 1.5rem;
+    padding-bottom: 3rem;
+  }
+
+  main .card .middle button {
+    width: 70%;
+    height: 4.5rem;
+    font-size: 1.4rem;
+  }
+
+  main .card .down ul li {
+    font-size: 1.2rem;
+    padding: 0.8rem 0px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  main .ttl h1 {
+    font-size: 2.5rem;
+  }
+
+  main .getStarted {
+    padding: 4rem 0.5rem;
+    gap: 2.5rem;
+  }
+
+  main .card {
+    width: 70%;
+    min-height: 42rem;
+  }
+
+  main .card .up {
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+
+  main .card .up .best {
+    width: 6rem;
+    height: 2.2rem;
+    top: -10px;
+  }
+
+  main .card .up .best p {
+    font-size: 0.9rem;
+  }
+
+  main .card .up .members {
+    font-size: 1rem;
+  }
+
+  main .card .up .price .big {
+    font-size: 1.3rem;
+  }
+
+  main .card .up .price .dollar p {
+    font-size: 1.3rem;
+  }
+
+  main .card .up .price h1 {
+    font-size: 5rem;
+  }
+
+  main .card .middle {
+    height: 15rem;
+    gap: 1rem;
+    padding-bottom: 2.5rem;
+  }
+
+  main .card .middle button {
+    width: 80%;
+    height: 4rem;
+    font-size: 1.2rem;
+  }
+
+  main .card .down ul li {
+    font-size: 1.1rem;
+    padding: 0.6rem 0px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  main .ttl h1 {
+    font-size: 4rem;
+  }
+
+  main .getStarted {
+    padding: min(10rem, 6%) min(4rem, 12%);
+  }
+
+  main .card {
+    width: 32rem;
+    height: 48rem;
+  }
+
+  main .card .up .price h1 {
+    font-size: 5rem;
+  }
+
+  main .card .middle button {
+    width: 65%;
+    height: 4.8rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+  main .getStarted {
+    padding: min(9rem, 4.5%) min(18rem, 14%);
+  }
+
+  main .card {
+    width: 35rem;
+  }
+
+  main .card .up .price h1 {
+    font-size: 7.5rem;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  main .getStarted {
+    padding: min(12rem, 6%) min(25rem, 18%);
+  }
+}
+
+main .onDemandPlans {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  padding: 4rem 5%;
+  border-bottom: 1px solid #ffffff;
+}
+
+main .onDemandPlans .video {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+main .onDemandPlans .video img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+main .onDemandPlans .video h1 {
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  line-height: 1.2;
+  font-weight: 600;
+  margin: 0;
+}
+
+main .onDemandPlans .video p {
+  font-size: clamp(0.9rem, 1.1vw, 1.6rem);
+  line-height: 1.5;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  margin: 0;
+}
+
+@media screen and (min-width: 1440px) {
+  main .onDemandPlans {
+    padding: 5rem 8%;
+    gap: 4rem;
+  }
+
+  main .onDemandPlans .video img {
+    height: 250px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  main .onDemandPlans {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    padding: 3.5rem 4%;
+  }
+
+  main .onDemandPlans .video img {
+    height: 180px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  main .onDemandPlans {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    padding: min(8rem, 10%) min(5rem, 10%);
+  }
+
+  main .onDemandPlans .video img {
+    height: 200px;
+  }
+
+  main .onDemandPlans .video h1 {
+    font-size: 1.8rem;
+  }
+
+  main .onDemandPlans .video p {
+    font-size: 1.1rem;
+    -webkit-line-clamp: 2;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 767px) {
+  main .onDemandPlans {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+    padding: min(5rem, 10%) min(2.5rem, 5%);
+  }
+
+  main .onDemandPlans .video img {
+    height: 180px;
+  }
+
+  main .onDemandPlans .video h1 {
+    font-size: 1.6rem;
+  }
+
+  main .onDemandPlans .video p {
+    font-size: 1rem;
+    -webkit-line-clamp: 2;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 599px) {
+  main .onDemandPlans {
+    grid-template-columns: 1fr;
+    gap: 5rem;
+    padding: min(8rem, 10%) min(5.8rem, 10%);
+  }
+
+  main .onDemandPlans .video img {
+    height: 200px;
+  }
+
+  main .onDemandPlans .video h1 {
+    font-size: 1.5rem;
+  }
+
+  main .onDemandPlans .video p {
+    font-size: 0.95rem;
+    -webkit-line-clamp: 2;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  main .onDemandPlans {
+    grid-template-columns: 1fr;
+    gap: 4.5rem;
+    padding: min(5rem, 10%) min(2.8rem, 10%);
+  }
+
+  main .onDemandPlans .video {
+    gap: 1rem;
+  }
+
+  main .onDemandPlans .video img {
+    height: 160px;
+  }
+
+  main .onDemandPlans .video h1 {
+    font-size: 1.3rem;
+  }
+
+  main .onDemandPlans .video p {
+    font-size: 0.9rem;
+    -webkit-line-clamp: 2;
+  }
+}
+
+@media screen and (max-width: 319px) {
+  main .onDemandPlans {
+    gap: 1rem;
+    padding: 1rem 2%;
+  }
+
+  main .onDemandPlans .video img {
+    height: 140px;
+  }
+
+  main .onDemandPlans .video h1 {
+    font-size: 1.2rem;
+  }
+
+  main .onDemandPlans .video p {
+    font-size: 0.85rem;
+    -webkit-line-clamp: 2;
+  }
+}
+
+@media screen and (max-height: 600px) and (orientation: landscape) and (min-width: 768px) {
+  main .onDemandPlans .video img {
+    height: 150px;
+  }
+
+  main .onDemandPlans .video p {
+    -webkit-line-clamp: 2;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  main .onDemandPlans {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 6rem 5%;
+    gap: 4rem;
+  }
+
+  main .onDemandPlans .video img {
+    height: 280px;
+  }
+
+  main .onDemandPlans .video h1 {
+    font-size: 2.2rem;
+  }
+
+  main .onDemandPlans .video p {
+    font-size: 1.1rem;
+    -webkit-line-clamp: 3;
+  }
+}
+
+@media print {
+  main .onDemandPlans .video {
+    break-inside: avoid;
+    margin-bottom: 1.5rem;
+  }
+
+  main .onDemandPlans .video img {
+    height: 120px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .liveClassesSchedule,
+  .weekDays {
+    display: none !important;
+  }
+
+  .carousel-container {
+    width: 92%;
+    max-width: 500px;
+    margin: 1.5rem auto;
+    padding: 1.2rem;
+    background-color: #0f0f0f;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  }
+
+  .mobile-day-header {
+    text-align: center;
+    padding: 1rem 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #1a1a1a, #2a2a2a);
+    color: #fff;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid #05e00b;
+    letter-spacing: 0.5px;
+  }
+  .mobile-day-header .gray {
+    color: #aaa;
+  }
+  .mobile-day-header .green {
+    color: #05e00b;
+    font-weight: 800;
+  }
+
+  .carousel-card {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 1.3rem;
+    margin-bottom: 1rem;
+    min-height: 155px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+  }
+  .carousel-card:hover {
+    transform: translateY(-5px);
+    border-color: #05e00b;
+    box-shadow: 0 8px 20px rgba(5, 224, 11, 0.15);
+  }
+
+  .carousel-card .up {
+    margin-bottom: 1rem;
+  }
+  .carousel-card .up p:first-child {
+    color: #05e00b;
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin-bottom: 0.4rem;
+  }
+  .carousel-card .up p:last-child {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.3;
+  }
+
+  .carousel-card .middle {
+    display: flex;
+    justify-content: space-between;
+    color: #bbb;
+    margin-bottom: 1.2rem;
+    font-size: 0.95rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px dashed #333;
+  }
+
+  .carousel-card .down p {
+    color: #ddd;
+    font-size: 0.95rem;
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+  }
+  .carousel-card .down .enable {
+    width: 100%;
+    height: 3rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #05e00b, #04c009);
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+  }
+  .carousel-card .down .enable:hover {
+    background: linear-gradient(90deg, #04c009, #03a007);
+    box-shadow: 0 5px 15px rgba(5, 224, 11, 0.4);
+  }
+  .carousel-card .down .disable {
+    width: 100%;
+    height: 3rem;
+    font-size: 1.1rem;
+    background-color: #333;
+    color: #888;
+    border: 1px solid #444;
+    border-radius: 8px;
+    cursor: not-allowed;
+  }
+
+  .carousel-arrows {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.8rem 0 1rem;
+  }
+  .carousel-arrow {
+    background: #2a2a2a;
+    color: #05e00b;
+    border: 2px solid #333;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.3rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  .carousel-arrow:hover {
+    background: #05e00b;
+    color: #000;
+    border-color: #05e00b;
+    transform: scale(1.1);
+  }
+
+  .carousel-day-indicator {
+    display: flex;
+    justify-content: center;
+    gap: 0.7rem;
+    margin-top: 1.2rem;
+  }
+  .carousel-day-dot {
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+    background: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .carousel-day-dot.active {
+    background: #05e00b;
+    transform: scale(1.3);
+    box-shadow: 0 0 10px #05e00b;
+  }
+}
+
+main .liveClassesFilter details[open] summary::after {
+  content: "▲";
+}
+
+main .liveClassesFilter summary::after {
+  content: "▼";
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%) rotate(0deg);
+  font-size: 0.75rem;
+  transition: transform 0.3s ease;
+  color: #ffffff;
+}
+
+main .liveClassesFilter form {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 18rem;
+  background-color: #000000;
+  z-index: 1000;
+  display: none;
+  border: 1px solid #ffffff;
+  border-top: none;
+  padding: 1rem;
+  border-radius: 0 0 8px 8px;
+}
+
+main .liveClassesFilter details[open] form {
+  display: block !important;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #333;
+}
+
+.clear-filter-btn,
+.apply-filter-btn {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.clear-filter-btn {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+.clear-filter-btn:hover {
+  background-color: #444;
+}
+
+.apply-filter-btn {
+  background-color: #05e00b;
+  color: #000;
+  font-weight: 600;
+}
+
+.apply-filter-btn:hover {
+  background-color: #04c009;
+}
+
+.mobile-filter-btn {
+  display: none;
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+@media (max-width: 767px) {
+  .mobile-filter-btn {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 1rem auto;
+  }
+}
+
+.day.has-filtered-classes {
+  position: relative;
+}
+
+.day.has-filtered-classes::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background: #05e00b;
+  border-radius: 50%;
+}
+
+.filter-modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter-modal {
+  background: #1a1a1a;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  max-height: 80vh;
+  overflow-y: auto;
+  border: 1px solid #333;
+}
+
+.filter-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid #333;
+}
+
+.filter-modal-header h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 1.3rem;
+}
+
+.close-modal {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter-modal-content {
+  padding: 1.5rem;
+}
+
+.filter-modal-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.filter-modal-content li {
+  margin-bottom: 1rem;
+}
+
+.filter-modal-content label {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.filter-modal-content label:hover {
+  background-color: #2a2a2a;
+}
+
+.filter-modal-content input[type="checkbox"] {
+  margin-right: 1rem;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.filter-modal-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-top: 1px solid #333;
+  gap: 1rem;
+}
+
+.filter-modal-footer button {
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  flex: 1;
+}
+
+.clear-modal-filters {
+  background: #333;
+  color: #fff;
+}
+
+.apply-modal-filters {
+  background: #05e00b;
+  color: #000;
+  font-weight: bold;
+}
+
+.no-classes-message {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #888;
+  font-size: 1.1rem;
+  background: #1a1a1a;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
