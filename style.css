@@ -1,0 +1,2391 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  list-style: none;
+  text-decoration: none;
+  font-family: "roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.1rem solid #ffffff;
+}
+
+.btn button {
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  font-size: 1.2 rem;
+  padding: 1.5rem 2.5rem;
+  transition: all 0.3s ease-in-out;
+  font-weight: 400;
+  border-right: 1px solid #ffffff;
+  margin: 0;
+}
+
+.btn i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 2.5rem;
+  color: #05e00b;
+  padding: 0 2rem;
+}
+
+.btn button:hover {
+  background-color: #05e00b;
+  color: #000000;
+  transition: all 0.3s ease-in-out;
+}
+
+body {
+  max-width: 100%;
+  background-color: #000000;
+}
+
+header {
+  width: 100%;
+  height: 10dvh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.1rem solid #ffffff;
+  position: relative;
+}
+
+header .logo {
+  width: 18vw;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-right: 0.1rem solid #ffffff;
+  padding-left: 2rem;
+}
+
+header .logo img {
+  width: 4rem;
+  height: 2.8rem;
+}
+
+header .logo h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+}
+
+header nav {
+  width: 55%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+header nav ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header nav ul li {
+  width: 100%;
+  height: 100%;
+  border-left: 0.1rem solid #ffffff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header nav ul li a {
+  font-size: 1.2rem;
+  font-weight: 300;
+  transition: all 0.3s ease-in-out;
+}
+
+header nav ul li a:hover {
+  color: #05e00b;
+  transition: all 0.3s ease-in-out;
+}
+
+header nav ul li .active {
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: #05e00b;
+}
+
+header nav ul li .active:hover {
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+
+header nav ul .logIn {
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 2rem;
+  transition: all 0.3s ease-in-out;
+  gap: 0.5rem;
+}
+
+header nav ul .logIn i {
+  font-size: 1.4rem;
+  color: #05e00b;
+}
+
+header nav ul .logIn a {
+  font-size: 1.3rem;
+  color: #05e00b;
+}
+
+header nav ul .logIn a:hover {
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+
+main {
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main .up {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+main .up .upText {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 0.1rem solid #ffffff;
+}
+
+main .up .upText h1 {
+  font-size: clamp(3rem, 15vw, 15rem);
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+main .up .down {
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .up .down .downLeft {
+  width: 40%;
+  height: 90dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: baseline;
+  padding: 0 5rem;
+  border-right: 0.1rem solid #ffffff;
+}
+
+main .up .down .downLeft .top {
+  width: 53%;
+  height: 46%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+}
+
+main .up .down .downLeft h2 {
+  font-size: clamp(1.8rem, 3.6vw, 2.6rem);
+  font-weight: 300;
+}
+
+main .up .down .downLeft p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.8rem;
+}
+
+main .up .down .downRight {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .up .down .downRight img {
+  width: 90%;
+  max-width: 100%;
+  height: auto;
+}
+
+main .joinUs {
+  width: 100%;
+  height: 100%;
+  padding: 1rem 0;
+  background-color: #05e00b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .joinUs .middle {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+main .joinUs .middle h3 {
+  font-size: clamp(1.8rem, 1.5vw, 2.4rem);
+  color: #000000;
+  font-weight: 700;
+}
+
+main .joinUs img {
+  width: clamp(12rem, 15vw, 15rem);
+}
+
+main .checkOurLatestClasses {
+  max-width: 100%;
+  height: 20dvh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 0 2rem;
+  border-bottom: 0.1rem solid #000000;
+}
+
+main .checkOurLatestClasses .left {
+  width: 28%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 0.1rem solid #000000;
+}
+
+main .checkOurLatestClasses .left h1 {
+  font-size: clamp(1.8rem, 3.6vw, 2.6rem);
+  color: #000000;
+  font-weight: 700;
+  padding: 0 5rem;
+}
+
+main .checkOurLatestClasses .right {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+main .checkOurLatestClasses .right p {
+  width: 30%;
+  color: #000000;
+  font-size: 1.6rem;
+}
+
+main .checkOurLatestClasses .right .whiteBtn {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.1rem solid #000000;
+}
+
+main .checkOurLatestClasses .right .whiteBtn button {
+  width: 100%;
+  height: 100%;
+  color: #000000;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  font-size: 1.4rem;
+  padding: 1rem;
+  transition: all 0.3s ease-in-out;
+  font-weight: 400;
+  border-right: 0.1rem solid #000000;
+}
+
+main .checkOurLatestClasses .right .whiteBtn button a {
+  color: #000000;
+}
+
+main .checkOurLatestClasses .right .whiteBtn i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 2.5rem;
+  color: #000000;
+  padding: 0 1rem;
+}
+
+main .checkOurLatestClasses .right .whiteBtn button:hover {
+  background-color: #05e00b;
+  color: #000000;
+  transition: all 0.3s ease-in-out;
+}
+
+main .videos {
+  max-width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  gap: 2rem;
+}
+
+main .videos .video {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  gap: 2rem;
+}
+
+main .videos .video h1 {
+  font-size: clamp(1.8rem, 2.4vw, 2.4rem);
+  font-weight: 700;
+  color: #000000;
+}
+
+main .videos .video img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+main .virtufit {
+  max-width: 99.9%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 0.1rem solid #ffffff;
+}
+
+main .virtufit .left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: baseline;
+  gap: 2rem;
+  padding: 0 10rem;
+}
+
+main .virtufit .left ul {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+main .virtufit .left .txt {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: baseline;
+  gap: 2rem;
+}
+
+main .virtufit .left .txt h1 {
+  font-size: clamp(2.4rem, 4.8vw, 2.8rem);
+  font-weight: 700;
+}
+
+main .virtufit .left .txt p {
+  font-size: 1.6rem;
+  width: 74%;
+  line-height: 2.4rem;
+}
+
+main .virtufit .left ul li {
+  font-size: 1.6rem;
+}
+
+main .virtufit .left ul li img {
+  width: 100%;
+  max-width: 100%;
+}
+
+main .virtufit .right {
+  width: 80%;
+}
+
+main .virtufit .right img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-left: 0.1rem solid #ffffff;
+}
+
+main .join {
+  max-width: 100%;
+  height: 20dvh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  border-bottom: 0.1rem solid #ffffff;
+}
+
+main .join .left {
+  width: 28%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 0.1rem solid #ffffff;
+}
+
+main .join .left h1 {
+  font-size: clamp(1.8rem, 3.6vw, 2.6rem);
+  color: #ffffff;
+  font-weight: 700;
+  padding: 0 5rem;
+}
+
+main .join .right {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+main .join .right p {
+  width: 30%;
+  font-size: 1.6rem;
+}
+
+main .plans {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .plans .boxLeft {
+  width: 100%;
+  height: 80dvh;
+  background-image: url("./img/35$.avif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  border-left: 0.1rem solid #ffffff;
+  border-right: 0.1rem solid #ffffff;
+}
+
+main .plans .ttl {
+  width: 10%;
+  height: 80%;
+  writing-mode: sideways-lr;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+main .plans .ttl h1 {
+  padding-bottom: 10rem;
+  font-size: 2.6rem;
+}
+
+main .plans .boxLeft .subBox {
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15%;
+  padding: 4rem 0;
+  border: 0.1rem solid #ffffff;
+}
+
+main .plans .boxLeft .subBox img {
+  width: 80%;
+  max-width: 100%;
+}
+
+main .plans .boxRight {
+  width: 100%;
+  height: 80dvh;
+  background-image: url("./img/29$.avif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  border-left: 0.1rem solid #ffffff;
+  border-right: 0.1rem solid #ffffff;
+}
+
+main .plans .boxRight .subBox {
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15%;
+  padding: 4rem 0;
+  border: 0.1rem solid #ffffff;
+}
+
+main .plans .boxRight .subBox img {
+  width: 80%;
+  max-width: 100%;
+}
+
+main .activities {
+  max-width: 100%;
+  height: 80dvh;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+main .activities .activitiesBox {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+main .activities .activitiesBox .imgOne {
+  width: 100%;
+  height: 50dvh;
+  background-image: url("./img/strengh.png");
+  border: 0.1rem solid #000000;
+  border-radius: 1rem;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1);
+  transition: all 1s ease-in-out;
+}
+
+main .activities .activitiesBox .imgOne:hover {
+  background-size: 150%;
+  transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+main .activities .activitiesBox .imgTwo {
+  width: 100%;
+  height: 50dvh;
+  background-image: url("./img/bootcamp.png");
+  border: 0.1rem solid #000000;
+  border-radius: 1rem;
+  background-size: cover;
+  background-position: center;
+  transition: background-size 1s ease-in-out;
+}
+
+main .activities .activitiesBox .imgTwo:hover {
+  background-size: 150%;
+  transition: background-size 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+main .activities .activitiesBox .imgThree {
+  width: 100%;
+  height: 50dvh;
+  background-image: url("./img/stretch.png");
+  border: 0.1rem solid #000000;
+  border-radius: 1rem;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.3s ease-in-out;
+}
+
+main .activities .activitiesBox .imgThree:hover {
+  background-size: 150%;
+  transition: all 0.3s ease-in-out;
+}
+
+main .activities .activitiesBox .imgFour {
+  width: 100%;
+  height: 50dvh;
+  background-image: url("./img/cardio.png");
+  border: 0.1rem solid #000000;
+  border-radius: 1rem;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.3s ease-in-out;
+}
+
+main .activities .activitiesBox .imgFour:hover {
+  background-size: 150%;
+  transition: all 0.3s ease-in-out;
+}
+
+main .activities .activitiesBox .imgFive {
+  width: 100%;
+  height: 50dvh;
+  background-image: url("./img/dance.png");
+  border: 0.1rem solid #000000;
+  border-radius: 1rem;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.3s ease-in-out;
+}
+
+main .activities .activitiesBox .imgFive:hover {
+  background-size: 150%;
+  transition: all 0.3s ease-in-out;
+}
+
+main .activities .activitiesBox h1 {
+  color: #000000;
+  font-size: 2.4rem;
+}
+
+main .activities .activitiesBox p {
+  color: #000000;
+  font-size: 1.6rem;
+}
+
+main .mobileApps {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.1rem solid #ffffff;
+}
+
+main .mobileApps .left {
+  width: 100%;
+}
+
+main .mobileApps .left img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-right: 0.1rem solid #ffffff;
+}
+
+main .mobileApps .right {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main .mobileApps .right ul {
+  width: 62%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+}
+
+main .mobileApps .right ul li {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .mobileApps .right .txt {
+  width: 62%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: baseline;
+  gap: 2rem;
+}
+
+main .mobileApps .right .txt h1 {
+  font-size: clamp(2.4rem, 4.8vw, 4.8rem);
+  font-weight: 700;
+}
+
+main .mobileApps .right .txt p {
+  font-size: 1.6rem;
+  width: 74%;
+  line-height: 2.4rem;
+}
+
+main .mobileApps .right ul li img {
+  width: 100%;
+  max-width: 100%;
+}
+
+main .mobileApps .right .apps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+main .mobileApps .right .apps .googlePlay {
+  width: 45%;
+}
+
+main .comments {
+  max-width: 100%;
+  max-height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+main .comments .box {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  gap: 2rem;
+  border-right: 0.1rem solid #ffffff;
+  border-bottom: 0.1rem solid #ffffff;
+  padding: 4rem 0 4rem 4rem;
+}
+
+main .comments .boxBorder {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  gap: 2rem;
+  border-bottom: 0.1rem solid #ffffff;
+  padding: 4rem 0 4rem 8rem;
+}
+
+main .comments .box h1 {
+  width: 20%;
+  font-size: 2.4rem;
+}
+
+main .comments .boxBorder h1 {
+  width: 40%;
+  font-size: 2.4rem;
+}
+
+main .comments .box p {
+  width: 45%;
+  font-size: 1.6rem;
+}
+
+main .comments .boxBorder p {
+  width: 50%;
+  font-size: 1.6rem;
+}
+
+main .comments .box .name {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+main .comments .boxBorder .name {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+main .comments .box .name p,
+main .comments .boxBorder .name p {
+  width: auto;
+  font-size: 1.6rem;
+}
+
+main .comments .box .name i,
+main .comments .boxBorder .name i {
+  color: #05e00b;
+  font-size: 1.6rem;
+}
+
+footer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+footer .signUp {
+  width: 100%;
+  height: 25dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  border-bottom: 0.1rem solid #ffffff;
+}
+
+footer .signUp h3 {
+  width: 18%;
+  font-size: 1.6rem;
+}
+
+footer .signUp .right {
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  gap: 2.5rem;
+}
+
+footer .signUp .right .email {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 3.5rem;
+}
+
+footer .signUp .right .email label {
+  font-size: 1.3rem;
+}
+
+footer .signUp .right .email input {
+  width: 40dvh;
+  height: 5dvh;
+  border: 0.1rem solid #ffffff;
+  background: none;
+  font-size: 1.6rem;
+  padding: 0.5rem;
+}
+
+footer .signUp .right .check label {
+  font-size: 1.4rem;
+  font-weight: 100;
+}
+
+footer button {
+  width: 25dvh;
+  height: 5dvh;
+  margin-top: 1rem;
+  background-color: #05e00b;
+  color: #000000;
+  cursor: pointer;
+  border: none;
+  font-size: 1.6rem;
+  font-weight: 200;
+  transition: all 0.3s ease-in-out;
+}
+
+footer button:hover {
+  background-color: #ffffff;
+  color: #000000;
+  transition: all 0.3s ease-in-out;
+}
+
+footer .plan {
+  max-width: 100%;
+  height: 60dvh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 45dvh;
+  border-bottom: 0.1rem solid #ffffff;
+  padding: 2rem 4rem;
+}
+
+footer .plan .logo {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 5rem;
+}
+
+footer .plan .logo .log {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: baseline;
+}
+
+footer .plan .logo .log img {
+  width: 2vw;
+  height: auto;
+}
+
+footer .plan .logo p {
+  width: 30%;
+  font-size: 1.6rem;
+}
+
+footer .plan .logo .btn button {
+  font-size: 1.3rem;
+}
+
+footer .right {
+  width: auto;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 8rem;
+}
+
+footer .right .menu {
+  width: 46%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 2rem;
+}
+
+footer .right .menu h3 {
+  font-size: 1.6rem;
+}
+
+footer .right .menu ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+footer .right .menu ul li a {
+  font-size: 1.4rem;
+}
+
+footer .right .socials {
+  width: auto;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 2rem;
+}
+
+footer .right .socials h3 {
+  font-size: 1.6rem;
+}
+
+footer .right .socials ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+footer .right .socials ul li a {
+  font-size: 1.4rem;
+}
+
+footer .right .gymAddress {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: baseline;
+  gap: 10dvh;
+}
+
+footer .right .gymAddress h3 {
+  font-size: 1.6rem;
+}
+
+footer .right .gymAddress p {
+  font-size: 1.4rem;
+}
+
+footer .right .gymAddress .gym {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+footer .right .gymAddress .address {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+footer .down {
+  width: 100%;
+  height: 3dvh;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+footer .down p {
+  font-size: 1.2rem;
+}
+
+/* TODO:-------------- Our Classes -------------- */
+
+main .ourClassesPlan {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: min(9rem, 15%) 0px;
+  border-bottom: 1px solid #ffffff;
+}
+
+main .ourClassesPlan h1 {
+  font-size: 4.5rem;
+  margin-bottom: min(5rem, 8%);
+}
+
+main .ourClassesPlan .ourClassesCard {
+  width: 65%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  gap: 3rem;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  padding: min(5rem, 8%) min(2rem, 5%);
+}
+
+main .ourClassesPlan .ourClassesCard .ourClassesCardUp {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  gap: 1rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #313131;
+}
+
+main .ourClassesPlan .ourClassesCard .ourClassesCardUp a {
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: #05e00b;
+  transition: all 0.3s ease-in-out;
+}
+
+main .ourClassesPlan .ourClassesCard .ourClassesCardUp p {
+  font-size: 1.4rem;
+}
+
+main .ourClassesPlan .ourClassesCard .ourClassesCardUp a:hover {
+  color: #038607;
+  transition: all 0.3s ease-in-out;
+}
+
+main .ourClassesPlan .ourClassesCard .ourClassesCardUp .readMore {
+  font-size: 1.3rem;
+  text-decoration: underline;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+main .ourClassesPlan .ourClassesCard .ourClassesCardDown {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+main .ourClassesPlan .ourClassesCard .ourClassesCardDown p {
+  font-size: 1.5rem;
+}
+
+main .ourClassesPlan .ourClassesCard .ourClassesCardDown button {
+  font-size: 1.4rem;
+  padding: min(1rem, 5%) min(1.5rem, 5%);
+  background-color: #000000;
+  border: 1px solid #ffffff;
+  color: #05e00b;
+  margin-top: 1rem;
+}
+
+main .ourClassesPlan .ourClassesCard .ourClassesCardDown button:hover {
+  text-decoration: underline;
+}
+
+main .getStartedCards {
+  width: 100%;
+  height: 100%;
+}
+
+/* TODO:-------------- On Demand -------------- */
+
+main .onDemandPlans {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  padding: min(8rem, 10%) min(5rem, 10%);
+  border-bottom: 1px solid #ffffff;
+}
+
+main .onDemandPlans .video {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  gap: 2rem;
+}
+
+main .onDemandPlans .video h1 {
+  font-size: 2rem;
+}
+
+main .onDemandPlans .video p {
+  font-size: 1.6rem;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+/* TODO:-------------- Live Classes -------------- */
+
+main .liveClassesUp {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: min(5rem, 10%) 0px;
+  flex-direction: column;
+}
+
+main .liveClassesUp .liveClassesTitle {
+  width: 85%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: min(2rem, 10%) 0px;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #313131;
+}
+
+main .liveClassesFilter {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+main .liveClassesFilter p {
+  font-size: 1.3rem;
+}
+
+main .liveClassesFilter details {
+  display: inline-block;
+  position: relative;
+}
+
+main .liveClassesFilter summary {
+  font-size: 1.3rem;
+  cursor: pointer;
+  list-style: none;
+  font-weight: 500;
+  padding-right: 2.5rem;
+  user-select: none;
+  background: #000000;
+  color: #ffffff;
+  border-radius: 0.5rem;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+main .liveClassesFilter summary::after {
+  content: "▼";
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%) rotate(0deg);
+  font-size: 0.75rem;
+  transition: transform 0.3s ease;
+  color: #ffffff;
+}
+
+main .liveClassesFilter form {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #000000;
+  z-index: 1000;
+  display: none;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+main .liveClassesFilter form fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  max-height: 20rem;
+  overflow-y: auto;
+}
+
+main .liveClassesFilter form fieldset ul {
+  list-style: none;
+  padding: 0.75rem;
+  margin: 0;
+}
+
+main .liveClassesFilter form fieldset ul li {
+  margin: 0;
+  padding: 0;
+}
+
+main .liveClassesFilter form fieldset ul li label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.625rem 0.75rem;
+  color: #ffffff;
+  border-radius: 0.25rem;
+  font-size: 1.2rem;
+  transition: background-color 0.2s ease;
+  margin-bottom: 0.25rem;
+}
+
+main .liveClassesFilter form fieldset ul li label:hover {
+  background-color: #1a1a1a;
+}
+
+main.liveClassesFilter form fieldset ul li label:last-child {
+  margin-bottom: 0;
+}
+
+main .liveClassesFilter form fieldset ul li label input[type="checkbox"] {
+  margin-right: 1rem;
+  cursor: pointer;
+  accent-color: #ffffff;
+}
+
+main .calendar {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .calendar .date {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+main .calendar .date img {
+  width: 1.8rem;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(298deg)
+    brightness(104%) contrast(103%);
+}
+
+main .calendar .date p {
+  font-size: 1.4rem;
+}
+
+main .weekDays {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: min(3rem, 10%) 0px;
+}
+
+main .weekDays .day {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+main .weekDays .day p {
+  font-size: 1.3rem;
+}
+
+main .weekDays .day .gray {
+  color: #c1c7c7;
+}
+
+main .weekDays .day .green {
+  color: #05e007;
+}
+
+main .liveClassesSchedule {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+main .liveClassesSchedule .liveClassesSectionOne {
+  width: 90%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  justify-items: center;
+  align-content: center;
+  border: 1px solid #4a4a4a;
+}
+
+main .liveClassesSchedule .liveClassesSectionOne .liveClassesCard {
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  gap: 2rem;
+  padding: min(2.8rem, 11.4%);
+  border-right: 1px solid #4a4a4a;
+}
+
+main .liveClassesSchedule .liveClassesSectionOne .noBorder {
+  border: none;
+}
+
+main .liveClassesSchedule P {
+  font-size: 1.3rem;
+  color: #f6f6f6;
+}
+
+main .liveClassesSchedule .liveClassesSectionOne .liveClassesCard .up {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+}
+
+main .liveClassesSchedule .liveClassesSectionOne .liveClassesCard .down {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+main
+  .liveClassesSchedule
+  .liveClassesSectionOne
+  .liveClassesCard
+  .down
+  .disable {
+  width: 13.5rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  background-color: #c7c7c7;
+  color: #000000;
+}
+
+main
+  .liveClassesSchedule
+  .liveClassesSectionOne
+  .liveClassesCard
+  .down
+  .enable {
+  width: 13.5rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  background-color: #05e00b;
+  color: #000000;
+  cursor: pointer;
+}
+
+main
+  .liveClassesSchedule
+  .liveClassesSectionOne
+  .liveClassesCard
+  .down
+  .enable:hover {
+  text-decoration: underline;
+}
+
+main .liveClassesSchedule .liveClassesSectionTwo {
+  width: 90%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  border-right: 1px solid #4a4a4a;
+}
+
+main .liveClassesSchedule .liveClassesSectionTwo .liveClassesCard {
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  gap: 2rem;
+  padding: min(1.8rem, 5%);
+  border-left: 1px solid #4a4a4a;
+  border-bottom: 1px solid #4a4a4a;
+}
+
+main .liveClassesSchedule .liveClassesSectionTwo .noCardBorder {
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  gap: 2rem;
+  padding: min(1.8rem, 5%);
+  border-left: 1px solid #4a4a4a;
+  border-bottom: noen;
+}
+
+main .liveClassesSchedule .liveClassesSectionTwo .noBorder {
+  border: none;
+}
+
+main .liveClassesSchedule P {
+  font-size: 1.3rem;
+  color: #f6f6f6;
+}
+
+main .liveClassesSchedule .liveClassesSectionTwo .liveClassesCard .up {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+}
+
+main .liveClassesSchedule .liveClassesSectionTwo .liveClassesCard .down {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+main
+  .liveClassesSchedule
+  .liveClassesSectionTwo
+  .liveClassesCard
+  .down
+  .disable {
+  width: 13.5rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  background-color: #c7c7c7;
+  color: #000000;
+}
+
+main
+  .liveClassesSchedule
+  .liveClassesSectionTwo
+  .liveClassesCard
+  .down
+  .enable {
+  width: 13.5rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  background-color: #05e00b;
+  color: #000000;
+  cursor: pointer;
+}
+
+main .liveClassesSchedule .liveClassesSectionTwo .noCardBorder .down .none {
+  display: none;
+}
+
+main
+  .liveClassesSchedule
+  .liveClassesSectionTwo
+  .liveClassesCard
+  .down
+  .enable:hover {
+  text-decoration: underline;
+}
+
+main .liveClassesSchedule .liveClassesSectionThree {
+  width: 90%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  border-right: 1px solid #4a4a4a;
+}
+
+main .liveClassesSchedule .liveClassesSectionThree .liveClassesCard {
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  gap: 2rem;
+  padding: min(1.8rem, 5%);
+  border-left: 1px solid #4a4a4a;
+  border-bottom: 1px solid #4a4a4a;
+}
+
+main .liveClassesSchedule .liveClassesSectionThree .noCardBorder {
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  gap: 2rem;
+  padding: min(1.8rem, 5%);
+  border-left: 1px solid #4a4a4a;
+  border-bottom: noen;
+}
+
+main .liveClassesSchedule .liveClassesSectionThree .noBorder {
+  border: none;
+}
+
+main .liveClassesSchedule P {
+  font-size: 1.3rem;
+  color: #f6f6f6;
+}
+
+main .liveClassesSchedule .liveClassesSectionThree .liveClassesCard .up {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+}
+
+main .liveClassesSchedule .liveClassesSectionThree .liveClassesCard .down {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+main
+  .liveClassesSchedule
+  .liveClassesSectionThree
+  .liveClassesCard
+  .down
+  .disable {
+  width: 13.5rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  background-color: #c7c7c7;
+  color: #000000;
+}
+
+main
+  .liveClassesSchedule
+  .liveClassesSectionThree
+  .liveClassesCard
+  .down
+  .enable {
+  width: 13.5rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  background-color: #05e00b;
+  color: #000000;
+  cursor: pointer;
+}
+
+main .liveClassesSchedule .liveClassesSectionThree .noCardBorder .down .none {
+  display: none;
+}
+
+main
+  .liveClassesSchedule
+  .liveClassesSectionThree
+  .liveClassesCard
+  .down
+  .enable:hover {
+  text-decoration: underline;
+}
+
+main .liveClassesSchedule .liveClassesSectionFour {
+  width: 90%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  border-right: 1px solid #4a4a4a;
+}
+
+main .liveClassesSchedule .liveClassesSectionFour .liveClassesCard {
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  gap: 2rem;
+  padding: min(1.8rem, 5%);
+  border-left: 1px solid #4a4a4a;
+  border-bottom: 1px solid #4a4a4a;
+}
+
+main .liveClassesSchedule .liveClassesSectionFour .noCardBorder {
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  gap: 2rem;
+  padding: min(1.8rem, 5%);
+  border-left: 1px solid #4a4a4a;
+  border-bottom: 1px solid #4a4a4a;
+}
+
+main .liveClassesSchedule .liveClassesSectionFour .noBorder {
+  border: none;
+}
+
+main .liveClassesSchedule P {
+  font-size: 1.3rem;
+  color: #f6f6f6;
+}
+
+main .liveClassesSchedule .liveClassesSectionFour .liveClassesCard .up {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+}
+
+main .liveClassesSchedule .liveClassesSectionFour .liveClassesCard .down {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+main
+  .liveClassesSchedule
+  .liveClassesSectionFour
+  .liveClassesCard
+  .down
+  .disable {
+  width: 13.5rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  background-color: #c7c7c7;
+  color: #000000;
+}
+
+main
+  .liveClassesSchedule
+  .liveClassesSectionFour
+  .liveClassesCard
+  .down
+  .enable {
+  width: 13.5rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  background-color: #05e00b;
+  color: #000000;
+  cursor: pointer;
+}
+
+main .liveClassesSchedule .liveClassesSectionFour .noCardBorder .down .none {
+  display: none;
+}
+
+main
+  .liveClassesSchedule
+  .liveClassesSectionFour
+  .liveClassesCard
+  .down
+  .enable:hover {
+  text-decoration: underline;
+}
+
+/* TODO:-------------- Contact -------------- */
+
+main .challangeBox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main .challangeBox .box,
+main .challangeBox .boxReverse {
+  width: 62%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ffffff;
+  margin-top: min(4rem, 8%);
+}
+
+main .challangeBox .box .left,
+main .challangeBox .boxReverse .left {
+  width: 50%;
+}
+
+main .challangeBox .box .left img,
+main .challangeBox .boxReverse .left img {
+  width: 100%;
+}
+
+main .challangeBox .box .right,
+main .challangeBox .boxReverse .right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.3rem;
+}
+
+main .challangeBox .box .right a,
+main .challangeBox .boxReverse .right a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main .challangeBox .box .right a h1,
+main .challangeBox .boxReverse .right a h1 {
+  font-size: 2.8rem;
+}
+
+main .challangeBox .box .right p,
+main .challangeBox .boxReverse .right p {
+  font-size: 1.3rem;
+}
+
+main .challangeBox .box .right button,
+main .challangeBox .boxReverse .right button {
+  color: #000000;
+  background-color: #05e00b;
+  border: 1px solid #05e00b;
+  font-size: 1.4rem;
+  cursor: pointer;
+  padding: min(0.8rem, 5%) min(3rem, 5%);
+  transition: all 0.3s ease-in-out;
+}
+
+main .challangeBox .box .right button:hover,
+main .challangeBox .boxReverse .right button:hover {
+  background-color: #000000;
+  color: #05e00b;
+  transition: all 0.3s ease-in-out;
+}
+
+/* TODO:-------------- Chalange Pages -------------- */
+
+main .boxTop {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: min(5rem, 10%);
+}
+
+main .boxTop .top {
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  gap: 2rem;
+  margin-bottom: 10rem;
+}
+
+main .boxTop .top h1 {
+  font-size: 8rem;
+}
+
+main .boxTop .top .quan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+main .boxTop .top .quan .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  border-right: 1px solid #ffffff;
+  padding-right: 4rem;
+}
+
+main .boxTop .top .quan .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+main .boxTop .top .quan .left p,
+main .boxTop .top .quan .right p {
+  font-size: 1.8rem;
+}
+
+main .boxTop .top p {
+  font-size: 1.5rem;
+}
+
+main .boxTop .strong {
+  width: 90rem;
+  height: 45rem;
+  background-image: url("./img/challange/strong.png");
+  background-position: center;
+  background-size: cover;
+}
+
+main .boxTop .arms {
+  width: 90rem;
+  height: 45rem;
+  background-image: url("./img/challange/arms.png");
+  background-position: center;
+  background-size: cover;
+}
+
+main .boxTop .squat {
+  width: 90rem;
+  height: 45rem;
+  background-image: url("./img/challange/squat.png");
+  background-position: center;
+  background-size: cover;
+}
+
+main .boxBottom {
+  width: 43%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main .boxBottom .boxBottomSub {
+  border-bottom: 1px solid #252525;
+  padding-bottom: 3rem;
+}
+
+main .boxBottom .boxBottomSub,
+main .boxBottom .share {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  gap: 2rem;
+  margin-bottom: 5rem;
+  padding-bottom: 10rem;
+}
+
+main .boxBottom .boxBottomSub h1,
+main .boxBottom .share h1 {
+  font-size: 3rem;
+  color: #05e00b;
+}
+
+main .boxBottom .boxBottomSub p,
+main .boxBottom .share p {
+  font-size: 1.5rem;
+}
+
+main .boxBottom .boxBottomSub p .green {
+  text-decoration: underline;
+  color: #05e00b;
+}
+
+main .boxBottom .share ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+main .boxBottom .share i {
+  font-size: 1.8rem;
+  color: #05e00b;
+}
+
+main .boxBottom .share .coppy {
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+main .boxBottom .share .coppy .check {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+main .boxBottom .share .coppy.active .icon {
+  display: none;
+}
+
+main .boxBottom .share .coppy.active .check {
+  display: inline;
+  opacity: 1;
+}
+
+main .boxBottom .share button {
+  color: #000000;
+  background-color: #05e00b;
+  border: 1px solid #05e00b;
+  font-size: 1.6rem;
+  cursor: pointer;
+  padding: min(1rem, 5%) min(4.5rem, 9%);
+  transition: all 0.3s ease-in-out;
+  margin-top: 4rem;
+}
+
+main .boxBottom .share button:hover {
+  background-color: #000000;
+  color: #05e00b;
+  transition: all 0.3s ease-in-out;
+}
+
+/* TODO:-------------- Contact -------------- */
+
+main .contactTitle {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid #ffffff;
+}
+
+main .contactTitle .left {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #ffffff;
+  padding: 5rem 0px;
+}
+
+main .contactTitle .left img {
+  width: 60%;
+}
+
+main .contactTitle .right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: min(3rem, 10%);
+}
+
+main .contactTitle .right p {
+  font-size: 1.3rem;
+  width: 59%;
+}
+
+main .registration {
+  width: 100%;
+  height: 80dvh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid #ffffff;
+}
+
+main .registration .left {
+  width: auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #ffffff;
+  padding: min(8.2rem, 10%);
+}
+
+main .registration .left h1 {
+  writing-mode: sideways-lr;
+  font-size: 3.5rem;
+  color: #05e00b;
+}
+
+main .registration .middle {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+main .registration .middle .middleUp {
+  width: auto;
+  height: 100;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  column-gap: 2rem;
+  row-gap: 2.5rem;
+}
+
+main .registration .middle .middleUp .box {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  gap: 1rem;
+}
+main .registration .middle .middleUp label {
+  font-size: 1.2rem;
+}
+
+main .registration .middle .middleUp input {
+  width: 20rem;
+  height: 3rem;
+  background-color: #000000;
+  border: 1px solid #ffffff;
+}
+
+main .registration .middle .middleDown {
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+main .registration .middle .middleDown .box {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+main .registration .middle .middleDown .box label {
+  font-size: 1.2rem;
+}
+
+main .registration .middle .middleDown .box input {
+  width: 42rem;
+  height: 8rem;
+  background-color: #000000;
+  border: 1px solid #ffffff;
+}
+
+main .registration .middle .middleDown button {
+  width: 100%;
+  height: 3.5rem;
+  background-color: #05e00b;
+  color: #000000;
+  cursor: pointer;
+  border: none;
+  font-size: 1.3rem;
+  font-weight: 200;
+  transition: all 0.3s ease-in-out;
+}
+
+main .registration .middle .middleDown button:hover {
+  background-color: #ffffff;
+  color: #000000;
+  transition: all 0.3s ease-in-out;
+}
+
+main .registration .right {
+  width: 38%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  padding: min(8.2rem, 10%);
+  border-left: 1px solid #ffffff;
+}
+
+main .registration .right .box {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+main .registration .right .box h3,
+main .registration .right .hours h3 {
+  font-size: 1.5rem;
+}
+
+main .registration .right .box p,
+main .registration .right .hours p {
+  font-size: 1.2rem;
+}
+
+main .registration .right .hours {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+main .registration .right .hours .time {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* TODO:-------------- Get Started -------------- */
+
+main .ttl {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5rem;
+}
+
+main .ttl h1 {
+  font-size: 5rem;
+}
+
+main .getStarted {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid #ffffff;
+  padding: min(10rem, 5%) min(22rem, 16%);
+}
+
+main .card {
+  width: 40rem;
+  height: 50rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid #ffffff;
+}
+
+main .card .up {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 2rem;
+  position: relative;
+}
+
+main .card .up .best {
+  width: 8rem;
+  height: 2.8rem;
+  background-color: #05e00b;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -14px;
+}
+
+main .card .up .best p {
+  font-size: 1.2rem;
+  color: #000000;
+}
+
+main .card .up .members {
+  font-size: 1.3rem;
+}
+
+main .card .up .price {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main .card .up .price .big {
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+
+main .card .up .price .dollar {
+  width: 10rem;
+  height: 0px;
+  display: flex;
+  align-items: baseline;
+}
+
+main .card .up .price .dollar p {
+  font-size: 1.7rem;
+  color: #05e00b;
+}
+
+main .card .up .price h1 {
+  font-size: 8rem;
+  color: #05e00b;
+}
+
+main .card .up .price p {
+  color: #05e00b;
+}
+
+main .card .middle {
+  width: 100%;
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  border-bottom: 1px solid #ffffff;
+  padding-bottom: 4rem;
+}
+
+main .card .middle .trial {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main .card .middle button {
+  width: 60%;
+  height: 5rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+  background-color: #000000;
+  border: 1px solid #ffffff;
+  color: #05e00b;
+}
+
+main .card .middle button:hover {
+  text-decoration: underline;
+}
+
+main .card .down {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+main .card .down ul {
+  width: 85%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+main .card .down ul li {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  border-bottom: 1px solid #252525;
+  padding: 1rem 0px;
+}
+
+main .card .down ul .noLine {
+  border: none;
+}
