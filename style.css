@@ -544,7 +544,7 @@ main .plans .boxLeft .subBox {
 }
 
 main .plans .boxLeft .subBox img {
-  width: 80%;
+  width: 100%;
   max-width: 100%;
 }
 
@@ -573,7 +573,7 @@ main .plans .boxRight .subBox {
 }
 
 main .plans .boxRight .subBox img {
-  width: 80%;
+  width: 100%;
   max-width: 100%;
 }
 
