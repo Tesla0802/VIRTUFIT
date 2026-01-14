@@ -979,3 +979,39 @@ document.addEventListener("DOMContentLoaded", function () {
     resizeTimeout = setTimeout(initMobileCarousel, 250);
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const currentLocation = window.location.pathname;
+  const currentPage = currentLocation.split("/").pop();
+
+  const navLinks = document.querySelectorAll("nav a");
+
+  navLinks.forEach((link) => {
+    const linkHref = link.getAttribute("href");
+
+    // Skip anchor links
+    if (linkHref && linkHref.startsWith("#")) {
+      return;
+    }
+
+    // Skip the "Get Started" link - it should always remain active
+    if (linkHref && linkHref.includes("getStarted.html")) {
+      link.classList.add("active");
+      link.style.color = "#05e00b";
+      return; // Skip further processing for this link
+    }
+
+    const linkPage = linkHref.split("/").pop();
+
+    // Remove active class and reset color
+    link.classList.remove("active");
+    link.style.color = "";
+
+    // If this link's page matches the current page, set it as active and green
+    if (linkPage === currentPage) {
+      link.classList.add("active");
+      link.style.color = "#05e00b";
+      link.style.fontWeight = "300";
+    }
+  });
+});

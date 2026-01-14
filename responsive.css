@@ -213,6 +213,7 @@ img {
     flex-direction: column;
     height: auto;
     padding: 2rem 0;
+    border: none;
   }
 
   main .checkOurLatestClasses .left,
